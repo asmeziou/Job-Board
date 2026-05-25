@@ -65,6 +65,9 @@ h2 {
   }
 }
 @media (max-width: 768) {
+  .container {
+    justify-content: center;
+  }
   .item {
     width: 80%;
   }
