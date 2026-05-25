@@ -18,13 +18,13 @@ h2 {
 .container {
   display: flex;
   flex-wrap: wrap;
+  gap: 20px;
   justify-content: space-between;
   background-color: #f1f1f1;
 }
 .item {
-  width: 30%;
+  width: calc((100% - 40px) / 3);
   height: 300px;
-  margin-bottom: 10px;
   background-color: white;
   border: 5px solid white;
   padding: 20px;
@@ -59,16 +59,19 @@ h2 {
 .salmon {
   border-color: salmon;
 }
-@media (max-width: 1024) {
+@media screen and (max-width: 1024px) {
+  .container {
+    justify-content: space-evenly;
+  }
   .item {
-    width: 45%;
+    width: calc((100% - 20px) / 2);
   }
 }
-@media (max-width: 768) {
+@media screen and (max-width: 768px) {
   .container {
     justify-content: center;
   }
   .item {
-    width: 80%;
+    width: 100%;
   }
 }
